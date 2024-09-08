@@ -1,6 +1,7 @@
 package com.mtks.request;
 
 import com.mtks.PlantAPI;
+import com.mtks.constants.UrlPrefix;
 
 import java.net.http.HttpResponse;
 import java.util.concurrent.CompletableFuture;
@@ -21,7 +22,8 @@ public class Plant {
     }
 
     public CompletableFuture<String> getPlants(int page,String populate){
-        return this.plantAPI.request("/plants")
+        return this.plantAPI.request("/api/plants")
+                .setApiPrefix(UrlPrefix.CMS_V2)
                 .addParam("pagination[page]",String.valueOf(page))
                 .addParam("populate",populate)
                 .execute();

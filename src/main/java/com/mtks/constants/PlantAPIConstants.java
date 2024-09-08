@@ -1,5 +1,6 @@
 package com.mtks.constants;
 
 public class PlantAPIConstants {
-    public static final String BASE_URL = "https://cms-v2.plantapp.app/api";
+    public static final String REQUEST_PROTOCOL = "https://";
+    public static final String BASE_URL = "plantapp.app";
 }
